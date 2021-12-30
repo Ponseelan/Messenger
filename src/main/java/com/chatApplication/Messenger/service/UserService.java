@@ -7,6 +7,8 @@ import com.chatApplication.Messenger.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -33,5 +35,9 @@ public class UserService {
 
     public ActionResult sendMessage(Message message) {
        return messageService.sendMessage(message);
+    }
+
+    public List<User> getUsers() {
+        return userRepository.findAll();
     }
 }

@@ -16,10 +16,8 @@ public class Message {
     @GeneratedValue
     private int id;
     @Column(name = "fromid")
-    @JsonIgnore
     private Long fromId;
     @Column(name = "toid")
-    @JsonIgnore
     private Long toId;
     private String Message;
     public MessageStatus status;
